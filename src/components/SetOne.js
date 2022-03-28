@@ -23,6 +23,7 @@ export default function SetOne(props) {
     playerCard = playerDeck.pop()
     computerCard = computerDeck.pop()
   }
+
   return (
     <>
       <Grid container sx={{ mb: "auto" }}>
