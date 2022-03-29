@@ -1,14 +1,13 @@
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
-
-import BlueBack from "../assets/images/deckBack/1B.svg"
-import Deck from "./DeckS"
+import Deck from "./Deck"
+import RedBack from "../assets/images/deckBack/2B.svg"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
-export default function SetOne(props) {
+export default function SetTwo(props) {
   // Card
   const radius = "14px"
-  const cardWidthP = "35%"
+  const cardWidthP = "32%"
   const cardWidthL = "60%"
 
   StartGame()
@@ -26,7 +25,22 @@ export default function SetOne(props) {
 
   return (
     <>
-      <Grid container sx={{ mb: "auto" }}>
+      <Grid
+        // container
+        sx={{
+          "@media (orientation: portrait)": {
+            display: "grid",
+            gridTemplateRows: "1fr",
+            gap: 4,
+            mb: "auto",
+          },
+          "@media (orientation: landscape)": {
+            display: "grid",
+            gridTemplateColumns: "repeat(3, 1fr)",
+            mb: "auto",
+          },
+        }}
+      >
         <Grid item xs={12} sm={4}>
           <Card
             sx={{
@@ -63,11 +77,7 @@ export default function SetOne(props) {
             }}
           >
             <CardActionArea onClick={props.drawCards}>
-              <CardMedia
-                component="img"
-                src={BlueBack}
-                alt="card deck black diamond back"
-              />
+              <CardMedia component="img" src={RedBack} alt="red diamond deck" />
             </CardActionArea>
           </Card>
         </Grid>

@@ -44,7 +44,10 @@ export default function HighCard() {
       >
         <AppBar
           position="relative"
-          sx={{ backgroundColor: "secondary.main", mb: "auto" }}
+          sx={{
+            backgroundColor: "secondary.main",
+            mb: "auto",
+          }}
         >
           <Toolbar>
             <Typography variant="h6" color="inherit" noWrap sx={{ mr: 2 }}>
