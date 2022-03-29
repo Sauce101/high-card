@@ -1,6 +1,7 @@
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
 import Deck from "./Deck"
 import RedBack from "../assets/images/deckBack/2B.svg"
+import "../assets/CSS/main.css"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
@@ -8,7 +9,7 @@ export default function SetTwo(props) {
   // Card
   const radius = "14px"
   const cardWidthP = "32%"
-  const cardWidthL = "60%"
+  const cardWidthL = "55%"
 
   StartGame()
   function StartGame() {
@@ -49,11 +50,13 @@ export default function SetTwo(props) {
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
+                animation: "rotationP 0.5s 1 ease-out",
               },
               "@media (orientation: landscape)": {
                 maxWidth: cardWidthL,
                 borderRadius: radius,
                 mx: "auto",
+                animation: "rotation 0.5s 1 ease-out",
               },
             }}
           >
@@ -89,11 +92,13 @@ export default function SetTwo(props) {
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
+                animation: "rotationP 0.5s 1 ease-out",
               },
               "@media (orientation: landscape)": {
                 maxWidth: cardWidthL,
                 borderRadius: radius,
                 mx: "auto",
+                animation: "rotation 0.5s 1 ease-out",
               },
             }}
           >
