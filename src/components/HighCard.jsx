@@ -50,8 +50,16 @@ export default function HighCard() {
           }}
         >
           <Toolbar>
-            <Typography variant="h6" color="inherit" noWrap sx={{ mr: 2 }}>
-              {/* High Card */}
+            <Typography
+              variant="h6"
+              color="inherit"
+              noWrap
+              sx={{
+                ml: 2,
+                fontFamily: "'Roboto Serif', serif",
+              }}
+            >
+              High Card
             </Typography>
           </Toolbar>
         </AppBar>
@@ -60,6 +68,17 @@ export default function HighCard() {
         ) : (
           <SetTwo drawCards={drawCards} />
         )}
+        <Typography
+          variant="footer"
+          color="inherit"
+          noWrap
+          sx={{
+            ml: 2,
+            // fontFamily: "'Roboto Serif', serif",
+          }}
+        >
+          &copy; 2022 Michael Saucedo
+        </Typography>
       </Box>
     </ThemeProvider>
   )

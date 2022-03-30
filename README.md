@@ -6,4 +6,4 @@ This is a high card game you can use in place of say, a coin flip. It builds a f
 
 Thanks for reading,
 
-Michael Saucedo
+Copyright 2022 Michael Saucedo
