@@ -1,7 +1,7 @@
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
-import Deck from "./Deck"
-import RedBack from "../assets/images/deckBack/2B.svg"
+import Deck from "./DeckTwo"
+import RedDBack from "../assets/images/deckBack/5B.svg"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
@@ -87,8 +87,12 @@ export default function SetTwo(props) {
               },
             }}
           >
-            <CardActionArea onClick={props.drawCards}>
-              <CardMedia component="img" src={RedBack} alt="red diamond deck" />
+            <CardActionArea onClick={props.drawCards} sx={{ color: "red" }}>
+              <CardMedia
+                component="img"
+                src={RedDBack}
+                alt="red diamond deck"
+              />
             </CardActionArea>
           </Card>
         </Grid>

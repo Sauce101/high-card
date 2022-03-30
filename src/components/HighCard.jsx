@@ -51,7 +51,7 @@ export default function HighCard() {
         >
           <Toolbar>
             <Typography variant="h6" color="inherit" noWrap sx={{ mr: 2 }}>
-              High Card
+              {/* High Card */}
             </Typography>
           </Toolbar>
         </AppBar>
