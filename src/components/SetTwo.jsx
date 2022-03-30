@@ -1,7 +1,7 @@
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
+import { keyframes } from "@emotion/react"
 import Deck from "./Deck"
 import RedBack from "../assets/images/deckBack/2B.svg"
-import "../assets/CSS/main.css"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
@@ -10,6 +10,14 @@ export default function SetTwo(props) {
   const radius = "14px"
   const cardWidthP = "32%"
   const cardWidthL = "55%"
+  const rotationLandscape = keyframes({
+    from: { transform: "rotate(0deg)" },
+    to: { transform: "rotate(360deg)" },
+  })
+  const rotationPortrait = keyframes({
+    from: { transform: "rotate(0deg)" },
+    to: { transform: "rotate(270deg)" },
+  })
 
   StartGame()
   function StartGame() {
@@ -50,13 +58,13 @@ export default function SetTwo(props) {
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
-                animation: "rotationP 0.5s 1 ease-out",
+                animation: `${rotationPortrait} 0.5s 1 ease-out`,
               },
               "@media (orientation: landscape)": {
                 maxWidth: cardWidthL,
                 borderRadius: radius,
                 mx: "auto",
-                animation: "rotation 0.5s 1 ease-out",
+                animation: `${rotationLandscape} 0.5s 1 ease-out`,
               },
             }}
           >
@@ -92,13 +100,13 @@ export default function SetTwo(props) {
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
-                animation: "rotationP 0.5s 1 ease-out",
+                animation: `${rotationPortrait} 0.5s 1 ease-out`,
               },
               "@media (orientation: landscape)": {
                 maxWidth: cardWidthL,
                 borderRadius: radius,
                 mx: "auto",
-                animation: "rotation 0.5s 1 ease-out",
+                animation: `${rotationLandscape} 0.5s 1 ease-out`,
               },
             }}
           >

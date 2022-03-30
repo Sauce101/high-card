@@ -22,7 +22,6 @@
   ],
   "start_url": "/",
   "display": "standalone",
-  "orientation": "landscape",
   "theme_color": "#3e2723",
   "background_color": "#010101",
   "scope": "/"
