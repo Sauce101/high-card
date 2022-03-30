@@ -46,7 +46,7 @@ export default function SetTwo(props) {
           <Card
             sx={{
               "@media (orientation: portrait)": {
-                transform: "rotateZ(90deg)",
+                transform: "rotateZ(-90deg)",
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
@@ -67,7 +67,7 @@ export default function SetTwo(props) {
           <Card
             sx={{
               "@media (orientation: portrait)": {
-                transform: "rotateZ(90deg)",
+                transform: "rotateZ(-90deg)",
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
@@ -88,7 +88,7 @@ export default function SetTwo(props) {
           <Card
             sx={{
               "@media (orientation: portrait)": {
-                transform: "rotateZ(90deg)",
+                transform: "rotateZ(-90deg)",
                 maxWidth: cardWidthP,
                 borderRadius: radius,
                 mx: "auto",
