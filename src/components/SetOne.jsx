@@ -1,6 +1,6 @@
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
-import Deck from "./DeckTwo"
+import Deck from "./DeckThree"
 import BlackDBack from "../assets/images/deckBack/4B.svg"
 
 let playerDeck, computerDeck, playerCard, computerCard

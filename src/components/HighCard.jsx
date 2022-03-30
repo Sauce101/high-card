@@ -68,17 +68,6 @@ export default function HighCard() {
         ) : (
           <SetTwo drawCards={drawCards} />
         )}
-        <Typography
-          variant="footer"
-          color="inherit"
-          noWrap
-          sx={{
-            ml: 2,
-            // fontFamily: "'Roboto Serif', serif",
-          }}
-        >
-          &copy; 2022 Michael Saucedo
-        </Typography>
       </Box>
     </ThemeProvider>
   )
