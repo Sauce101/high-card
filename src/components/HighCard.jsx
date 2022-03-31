@@ -1,8 +1,11 @@
-import React, { useState } from "react"
+import React from "react"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material"
-import SetOne from "./SetOne"
-import SetTwo from "./SetTwo"
+import ReplayIcon from "@mui/icons-material/Replay"
+// import SetOne from "./SetOne"
+// import SetTwo from "./SetTwo"
+// import SetThree from "./SetThree"
+import SetFour from "./SetFour"
 
 const theme = createTheme({
   palette: {
@@ -22,14 +25,6 @@ const theme = createTheme({
 })
 
 export default function HighCard() {
-  const [active, setActive] = useState(true)
-
-  const drawCards = () => {
-    setActive(flip => {
-      return !flip
-    })
-  }
-
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -56,18 +51,16 @@ export default function HighCard() {
               noWrap
               sx={{
                 ml: 2,
+                mr: "auto",
                 fontFamily: "'Roboto Serif', serif",
               }}
             >
               High Card
             </Typography>
+            <ReplayIcon onClick={() => window.location.reload(false)} />
           </Toolbar>
         </AppBar>
-        {active ? (
-          <SetOne drawCards={drawCards} />
-        ) : (
-          <SetTwo drawCards={drawCards} />
-        )}
+        <SetFour />
       </Box>
     </ThemeProvider>
   )
