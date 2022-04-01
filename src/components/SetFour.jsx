@@ -1,8 +1,8 @@
+import { useState, useEffect } from "react"
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
 import Deck from "./DeckThree"
 import RedDBack from "../assets/images/deckThree/2B.svg"
-import { useState, useEffect } from "react"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
@@ -24,8 +24,12 @@ export default function SetFour() {
   const flipCards = () => setTopcard(!topcard)
 
   useEffect(() => {
+    // StartGame()
     playerCard = playerDeck.pop()
     computerCard = computerDeck.pop()
+    if (computerDeck.numberOfCards === 0) {
+      StartGame()
+    }
   }, [topcard])
 
   // Card size and animate

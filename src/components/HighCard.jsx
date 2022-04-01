@@ -1,7 +1,7 @@
-import React from "react"
+// import React, { useState } from "react"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material"
-import ReplayIcon from "@mui/icons-material/Replay"
+// import ReplayIcon from "@mui/icons-material/Replay"
 // import SetOne from "./SetOne"
 // import SetTwo from "./SetTwo"
 // import SetThree from "./SetThree"
@@ -25,6 +25,9 @@ const theme = createTheme({
 })
 
 export default function HighCard() {
+  // const [newd, setNewd] = useState(1)
+  // const newDeal = () => setNewd(newd + 1)
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -57,10 +60,11 @@ export default function HighCard() {
             >
               High Card
             </Typography>
-            <ReplayIcon onClick={() => window.location.reload(false)} />
+            {/* <ReplayIcon onClick={newDeal} /> */}
           </Toolbar>
         </AppBar>
         <SetFour />
+        {/* <SetFour newd={newd + 1} /> */}
       </Box>
     </ThemeProvider>
   )
