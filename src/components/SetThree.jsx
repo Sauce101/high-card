@@ -40,11 +40,11 @@ export default function SetThree() {
   const cardWidthL = "55%"
   const rotationLandscape = keyframes({
     from: { transform: "rotate(0deg)" },
-    to: { transform: "rotate(360deg)" },
+    to: { transform: "rotate(359deg)" },
   })
   const rotationPortrait = keyframes({
     from: { transform: "rotate(-90deg)" },
-    to: { transform: "rotate(-450deg)" },
+    to: { transform: "rotate(-449deg)" },
   })
 
   return (
@@ -53,7 +53,7 @@ export default function SetThree() {
         sx={{
           "@media (orientation: portrait)": {
             display: "grid",
-            gridTemplateRows: "1fr",
+            gridTemplateRows: "repeat(3, 1fr)",
             gap: 3,
             mb: "auto",
             // overflow: "hidden",
