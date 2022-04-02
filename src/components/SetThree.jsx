@@ -70,22 +70,22 @@ export default function SetThree() {
             <Card
               sx={{
                 "@media (orientation: portrait)": {
-                  animation: `${rotationPortrait} 0.5s  ease-in-out`,
                   maxWidth: cardWidthP,
                   borderRadius: radius,
                   mx: "auto",
-                  transform: "rotate(-90deg)",
                   transformOrigin: "center",
+                  transform: "rotate(-90deg)",
+                  animation: `${rotationPortrait} .6s 1 ease-out`,
                 },
                 "@media (orientation: landscape)": {
                   maxWidth: cardWidthL,
                   borderRadius: radius,
                   mx: "auto",
-                  animation: `${rotationLandscape} 0.5s 1 ease-out`,
+                  animation: `${rotationLandscape} .5s 1 ease-out`,
                 },
               }}
             >
-              <CardMedia component="img" src={playerCard} alt="" />
+              <CardMedia component="img" src={playerCard} alt="card" />
             </Card>
           )}
           {!topcard && (
@@ -97,17 +97,17 @@ export default function SetThree() {
                   mx: "auto",
                   transformOrigin: "center",
                   transform: "rotate(-90deg)",
-                  animation: `${rotationPortrait} 0.5s 1 ease-in-out`,
+                  animation: `${rotationPortrait} .6s ease-out`,
                 },
                 "@media (orientation: landscape)": {
                   maxWidth: cardWidthL,
                   borderRadius: radius,
                   mx: "auto",
-                  animation: `${rotationLandscape} 0.5s 1 ease-out`,
+                  animation: `${rotationLandscape} .5s 1 ease-out`,
                 },
               }}
             >
-              <CardMedia component="img" src={playerCard} alt="" />
+              <CardMedia component="img" src={playerCard} alt="card" />
             </Card>
           )}
         </Grid>
@@ -150,44 +150,44 @@ export default function SetThree() {
             <Card
               sx={{
                 "@media (orientation: portrait)": {
-                  transform: "rotate(-90deg)",
-                  transformOrigin: "center",
                   maxWidth: cardWidthP,
                   borderRadius: radius,
                   mx: "auto",
-                  animation: `${rotationPortrait} .4s 1 ease-in-out`,
+                  transformOrigin: "center",
+                  transform: "rotate(-90deg)",
+                  animation: `${rotationPortrait} .7s 1 ease-out `,
                 },
                 "@media (orientation: landscape)": {
                   maxWidth: cardWidthL,
                   borderRadius: radius,
                   mx: "auto",
-                  animation: `${rotationLandscape} 0.5s 1 ease-out`,
+                  animation: `${rotationLandscape} .7s 1 ease-out`,
                 },
               }}
             >
-              <CardMedia component="img" src={computerCard} alt="" />
+              <CardMedia component="img" src={computerCard} alt="card" />
             </Card>
           )}
           {!topcard && (
             <Card
               sx={{
                 "@media (orientation: portrait)": {
-                  transform: "rotate(-90deg)",
-                  transformOrigin: "center",
                   maxWidth: cardWidthP,
                   borderRadius: radius,
                   mx: "auto",
-                  animation: `${rotationPortrait} .4s 1 ease-in-out`,
+                  transformOrigin: "center",
+                  transform: "rotate(-90deg)",
+                  animation: `${rotationPortrait} .7s 1 ease-out `,
                 },
                 "@media (orientation: landscape)": {
                   maxWidth: cardWidthL,
                   borderRadius: radius,
                   mx: "auto",
-                  animation: `${rotationLandscape} 0.5s 1 ease-out`,
+                  animation: `${rotationLandscape} .7s 1 ease-out`,
                 },
               }}
             >
-              <CardMedia component="img" src={computerCard} alt="" />
+              <CardMedia component="img" src={computerCard} alt="card" />
             </Card>
           )}
         </Grid>
