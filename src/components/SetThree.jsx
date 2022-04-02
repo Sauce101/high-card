@@ -54,7 +54,7 @@ export default function SetThree() {
           "@media (orientation: portrait)": {
             display: "grid",
             gridTemplateRows: "1fr",
-            gap: 5,
+            gap: 3,
             mb: "auto",
             // overflow: "hidden",
           },
