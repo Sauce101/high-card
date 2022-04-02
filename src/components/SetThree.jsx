@@ -2,8 +2,8 @@ import { useState, useEffect } from "react"
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
 import Deck from "./OldDeck"
-import RedDBack from "../assets/images/deckOld/2B.svg"
-import DarkDBack from "../assets/images/deckOld/1B.svg"
+import RedDBack from "../assets/images/deckOldCards/2B.svg"
+import DarkDBack from "../assets/images/deckOldCards/1B.svg"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
