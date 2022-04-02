@@ -1,6 +1,6 @@
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material"
-import SetOne from "./SetOne"
+import SetThree from "./SetThree"
 
 const theme = createTheme({
   palette: {
@@ -19,7 +19,7 @@ const theme = createTheme({
   },
 })
 
-export default function HighCard() {
+export default function HighCardTwo() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -54,7 +54,7 @@ export default function HighCard() {
             </Typography>
           </Toolbar>
         </AppBar>
-        <SetOne />
+        <SetThree />
       </Box>
     </ThemeProvider>
   )
