@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react"
 import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
-import { keyframes } from "@emotion/react"
 import Deck from "./Decks/OldDeck"
 import RedDBack from "../assets/images/cards/old/2B.svg"
 import DarkDBack from "../assets/images/cards/old/1B.svg"
+import PlayerCardData from "./cardData/PlayerCardData"
+import ComputerCardData from "./cardData/ComputerCardData"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
@@ -21,9 +22,12 @@ function StartGame() {
 }
 
 export default function SetThree() {
-  const [topcard, setTopcard] = useState(true)
-  const [nextdeck, setNextdeck] = useState(true)
-  const flipCards = () => setTopcard(!topcard)
+  const [topcard, setTopcard] = useState(() => {
+    return true
+  })
+  const [nextdeck, setNextdeck] = useState(() => {
+    return true
+  })
 
   useEffect(() => {
     playerCard = playerDeck.pop()
@@ -34,18 +38,12 @@ export default function SetThree() {
     }
   }, [topcard, nextdeck])
 
-  // Card size and animate
+  const flipCards = () => setTopcard(!topcard)
+
+  // Card size
   const radius = "14px"
   const cardWidthP = "32%"
   const cardWidthL = "55%"
-  const rotationLandscape = keyframes({
-    from: { transform: "rotate(0deg)" },
-    to: { transform: "rotate(359deg)" },
-  })
-  const rotationPortrait = keyframes({
-    from: { transform: "rotate(-90deg)" },
-    to: { transform: "rotate(-449deg)" },
-  })
 
   return (
     <>
@@ -66,50 +64,8 @@ export default function SetThree() {
         }}
       >
         <Grid item xs={12} sm={4}>
-          {topcard && (
-            <Card
-              sx={{
-                "@media (orientation: portrait)": {
-                  maxWidth: cardWidthP,
-                  borderRadius: radius,
-                  mx: "auto",
-                  transformOrigin: "center",
-                  transform: "rotate(-90deg)",
-                  animation: `${rotationPortrait} .6s 1 ease-out`,
-                },
-                "@media (orientation: landscape)": {
-                  maxWidth: cardWidthL,
-                  borderRadius: radius,
-                  mx: "auto",
-                  animation: `${rotationLandscape} .5s 1 ease-out`,
-                },
-              }}
-            >
-              <CardMedia component="img" src={playerCard} alt="card" />
-            </Card>
-          )}
-          {!topcard && (
-            <Card
-              sx={{
-                "@media (orientation: portrait)": {
-                  maxWidth: cardWidthP,
-                  borderRadius: radius,
-                  mx: "auto",
-                  transformOrigin: "center",
-                  transform: "rotate(-90deg)",
-                  animation: `${rotationPortrait} .6s ease-out`,
-                },
-                "@media (orientation: landscape)": {
-                  maxWidth: cardWidthL,
-                  borderRadius: radius,
-                  mx: "auto",
-                  animation: `${rotationLandscape} .5s 1 ease-out`,
-                },
-              }}
-            >
-              <CardMedia component="img" src={playerCard} alt="card" />
-            </Card>
-          )}
+          {topcard && <PlayerCardData playerCard={playerCard} />}
+          {!topcard && <PlayerCardData playerCard={playerCard} />}
         </Grid>
 
         <Grid item xs={12} sm={4}>
@@ -146,50 +102,8 @@ export default function SetThree() {
         </Grid>
 
         <Grid item xs={12} sm={4}>
-          {topcard && (
-            <Card
-              sx={{
-                "@media (orientation: portrait)": {
-                  maxWidth: cardWidthP,
-                  borderRadius: radius,
-                  mx: "auto",
-                  transformOrigin: "center",
-                  transform: "rotate(-90deg)",
-                  animation: `${rotationPortrait} .7s 1 ease-out `,
-                },
-                "@media (orientation: landscape)": {
-                  maxWidth: cardWidthL,
-                  borderRadius: radius,
-                  mx: "auto",
-                  animation: `${rotationLandscape} .7s 1 ease-out`,
-                },
-              }}
-            >
-              <CardMedia component="img" src={computerCard} alt="card" />
-            </Card>
-          )}
-          {!topcard && (
-            <Card
-              sx={{
-                "@media (orientation: portrait)": {
-                  maxWidth: cardWidthP,
-                  borderRadius: radius,
-                  mx: "auto",
-                  transformOrigin: "center",
-                  transform: "rotate(-90deg)",
-                  animation: `${rotationPortrait} .7s 1 ease-out `,
-                },
-                "@media (orientation: landscape)": {
-                  maxWidth: cardWidthL,
-                  borderRadius: radius,
-                  mx: "auto",
-                  animation: `${rotationLandscape} .7s 1 ease-out`,
-                },
-              }}
-            >
-              <CardMedia component="img" src={computerCard} alt="card" />
-            </Card>
-          )}
+          {topcard && <ComputerCardData computerCard={computerCard} />}
+          {!topcard && <ComputerCardData computerCard={computerCard} />}
         </Grid>
       </Grid>
     </>

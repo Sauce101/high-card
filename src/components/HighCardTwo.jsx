@@ -22,7 +22,10 @@ const theme = createTheme({
 })
 
 export default function HighCardTwo() {
-  const [nextdeck, setNextdeck] = useState(true)
+  const [nextdeck, setNextdeck] = useState(() => {
+    return true
+  })
+
   const deckStyle = () => setNextdeck(!nextdeck)
 
   return (
