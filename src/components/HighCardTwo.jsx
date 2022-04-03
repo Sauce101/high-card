@@ -1,6 +1,8 @@
+import { useState } from "react"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material"
 import SetTwo from "./SetTwo"
+import SetThree from "./SetThree"
 
 const theme = createTheme({
   palette: {
@@ -20,6 +22,9 @@ const theme = createTheme({
 })
 
 export default function HighCardTwo() {
+  const [nextdeck, setNextdeck] = useState(true)
+  const deckStyle = () => setNextdeck(!nextdeck)
+
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
@@ -49,12 +54,13 @@ export default function HighCardTwo() {
                 mr: "auto",
                 fontFamily: "'Roboto Serif', serif",
               }}
+              onClick={deckStyle}
             >
               High Card
             </Typography>
           </Toolbar>
         </AppBar>
-        <SetTwo />
+        {nextdeck ? <SetTwo /> : <SetThree />}
       </Box>
     </ThemeProvider>
   )
