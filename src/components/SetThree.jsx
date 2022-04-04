@@ -63,7 +63,7 @@ export default function SetThree() {
           },
         }}
       >
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
           {topcard && <PlayerCardData playerCard={playerCard} {...cardsize} />}
           {!topcard && <PlayerCardData playerCard={playerCard} {...cardsize} />}
         </Grid>
@@ -76,7 +76,7 @@ export default function SetThree() {
           />
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
           {topcard && (
             <ComputerCardData computerCard={computerCard} {...cardsize} />
           )}

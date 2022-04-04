@@ -8,8 +8,8 @@ const PlayerCardData = ({ playerCard, ...cardsize }) => {
     to: { transform: "rotate(270deg)" },
   })
   const rotationLandscape = keyframes({
-    from: { transform: "rotate(0deg)" },
-    to: { transform: "rotate(360deg)" },
+    from: { transform: "rotateY(0deg)" },
+    to: { transform: "rotateY(360deg)" },
   })
 
   return (
@@ -19,16 +19,16 @@ const PlayerCardData = ({ playerCard, ...cardsize }) => {
           maxWidth: cardsize.cardWidthP,
           borderRadius: cardsize.radius,
           mx: "auto",
-          transformOrigin: "center",
           transform: "rotate(-90deg)",
-          animation: `${rotationPortrait} .5s 1 ease-out`,
+          animation: `${rotationPortrait} .6s 1 ease-out`,
         },
         "@media (orientation: landscape)": {
           maxWidth: cardsize.cardWidthL,
           borderRadius: cardsize.radius,
           ml: "auto",
           mr: 4,
-          animation: `${rotationLandscape} .5s 1 ease-out`,
+          animation: `${rotationLandscape} .6s 1 ease-out`,
+          transformStyle: "preserve-3d",
         },
       }}
     >
