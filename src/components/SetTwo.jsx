@@ -7,7 +7,6 @@ import DeckCardData from "./cardData/DeckCardData"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
-StartGame()
 function StartGame() {
   const deck = new Deck()
   deck.shuffle()
@@ -19,6 +18,7 @@ function StartGame() {
   playerCard = playerDeck.pop()
   computerCard = computerDeck.pop()
 }
+StartGame()
 
 export default function SetTwo() {
   const [topcard, setTopcard] = useState(() => {

@@ -3,14 +3,15 @@ import { Card, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
 
 const PlayerCardData = ({ playerCard, ...cardsize }) => {
-  const rotationLandscape = keyframes({
-    from: { transform: "rotate(0deg)" },
-    to: { transform: "rotate(359deg)" },
-  })
   const rotationPortrait = keyframes({
     from: { transform: "rotate(-90deg)" },
-    to: { transform: "rotate(-449deg)" },
+    to: { transform: "rotate(270deg)" },
   })
+  const rotationLandscape = keyframes({
+    from: { transform: "rotate(0deg)" },
+    to: { transform: "rotate(360deg)" },
+  })
+
   return (
     <Card
       sx={{
@@ -20,14 +21,14 @@ const PlayerCardData = ({ playerCard, ...cardsize }) => {
           mx: "auto",
           transformOrigin: "center",
           transform: "rotate(-90deg)",
-          animation: `${rotationPortrait} .4s 1 ease-out`,
+          animation: `${rotationPortrait} .5s 1 ease-out`,
         },
         "@media (orientation: landscape)": {
           maxWidth: cardsize.cardWidthL,
           borderRadius: cardsize.radius,
           ml: "auto",
           mr: 4,
-          animation: `${rotationLandscape} .4s 1 ease-out`,
+          animation: `${rotationLandscape} .5s 1 ease-out`,
         },
       }}
     >
