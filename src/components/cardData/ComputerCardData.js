@@ -24,14 +24,14 @@ export default function ComputerCardData({ computerCard }) {
           mx: "auto",
           transformOrigin: "center",
           transform: "rotate(-90deg)",
-          animation: `${rotationPortrait} .6s ease-out`,
+          animation: `${rotationPortrait} .8s 1 ease-out`,
         },
         "@media (orientation: landscape)": {
           maxWidth: cardWidthL,
           borderRadius: radius,
           mr: "auto",
           ml: 4,
-          animation: `${rotationLandscape} .5s 1 ease-out`,
+          animation: `${rotationLandscape} .8s 1 ease-out`,
         },
       }}
     >

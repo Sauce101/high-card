@@ -24,7 +24,7 @@ const PlayerCardData = ({ playerCard }) => {
           mx: "auto",
           transformOrigin: "center",
           transform: "rotate(-90deg)",
-          animation: `${rotationPortrait} .6s ease-out`,
+          animation: `${rotationPortrait} .5s 1 ease-out`,
         },
         "@media (orientation: landscape)": {
           maxWidth: cardWidthL,
