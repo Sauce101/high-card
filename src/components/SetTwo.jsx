@@ -1,10 +1,9 @@
 import { useState, useEffect } from "react"
-import { Grid, Card, CardActionArea, CardMedia } from "@mui/material"
+import { Grid } from "@mui/material"
 import Deck from "./Decks/PlainDeck"
-import RedDBack from "../assets/images/cards/plain/2B.svg"
-import DarkDBack from "../assets/images/cards/plain/1B.svg"
 import PlayerCardData from "./cardData/PlayerCardData"
 import ComputerCardData from "./cardData/ComputerCardData"
+import DeckCardData from "./cardData/DeckCardData"
 
 let playerDeck, computerDeck, playerCard, computerCard
 
@@ -41,9 +40,11 @@ export default function SetTwo() {
   const flipCards = () => setTopcard(!topcard)
 
   // Card size
-  const radius = "14px"
-  const cardWidthP = "32%"
-  const cardWidthL = "55%"
+  let cardsize = {
+    radius: "14px",
+    cardWidthL: "55%",
+    cardWidthP: "32%",
+  }
 
   return (
     <>
@@ -64,46 +65,25 @@ export default function SetTwo() {
         }}
       >
         <Grid item xs={12} sm={4}>
-          {topcard && <PlayerCardData playerCard={playerCard} />}
-          {!topcard && <PlayerCardData playerCard={playerCard} />}
+          {topcard && <PlayerCardData playerCard={playerCard} {...cardsize} />}
+          {!topcard && <PlayerCardData playerCard={playerCard} {...cardsize} />}
         </Grid>
 
         <Grid item xs={12} sm={4}>
-          <Card
-            sx={{
-              "@media (orientation: portrait)": {
-                transform: "rotate(-90deg)",
-                transformOrigin: "center",
-                maxWidth: cardWidthP,
-                borderRadius: radius,
-                mx: "auto",
-              },
-              "@media (orientation: landscape)": {
-                maxWidth: cardWidthL,
-                borderRadius: radius,
-                mx: "auto",
-              },
-            }}
-          >
-            <CardActionArea
-              onClick={flipCards}
-              sx={{
-                color: "red",
-                ...(nextdeck === false && { color: "black" }),
-              }}
-            >
-              <CardMedia
-                component="img"
-                src={nextdeck ? RedDBack : DarkDBack}
-                alt="red diamond back"
-              />
-            </CardActionArea>
-          </Card>
+          <DeckCardData
+            flipCards={flipCards}
+            nextdeck={nextdeck}
+            {...cardsize}
+          />
         </Grid>
 
         <Grid item xs={12} sm={4}>
-          {topcard && <ComputerCardData computerCard={computerCard} />}
-          {!topcard && <ComputerCardData computerCard={computerCard} />}
+          {topcard && (
+            <ComputerCardData computerCard={computerCard} {...cardsize} />
+          )}
+          {!topcard && (
+            <ComputerCardData computerCard={computerCard} {...cardsize} />
+          )}
         </Grid>
       </Grid>
     </>

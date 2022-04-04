@@ -2,11 +2,7 @@ import React from "react"
 import { Card, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
 
-const PlayerCardData = ({ playerCard }) => {
-  // Card size and animate
-  const radius = "14px"
-  const cardWidthP = "32%"
-  const cardWidthL = "55%"
+const PlayerCardData = ({ playerCard, ...cardsize }) => {
   const rotationLandscape = keyframes({
     from: { transform: "rotate(0deg)" },
     to: { transform: "rotate(359deg)" },
@@ -19,19 +15,19 @@ const PlayerCardData = ({ playerCard }) => {
     <Card
       sx={{
         "@media (orientation: portrait)": {
-          maxWidth: cardWidthP,
-          borderRadius: radius,
+          maxWidth: cardsize.cardWidthP,
+          borderRadius: cardsize.radius,
           mx: "auto",
           transformOrigin: "center",
           transform: "rotate(-90deg)",
-          animation: `${rotationPortrait} .5s 1 ease-out`,
+          animation: `${rotationPortrait} .4s 1 ease-out`,
         },
         "@media (orientation: landscape)": {
-          maxWidth: cardWidthL,
-          borderRadius: radius,
+          maxWidth: cardsize.cardWidthL,
+          borderRadius: cardsize.radius,
           ml: "auto",
           mr: 4,
-          animation: `${rotationLandscape} .5s 1 ease-out`,
+          animation: `${rotationLandscape} .4s 1 ease-out`,
         },
       }}
     >

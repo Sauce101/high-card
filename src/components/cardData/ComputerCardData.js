@@ -1,11 +1,7 @@
 import { Card, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
 
-export default function ComputerCardData({ computerCard }) {
-  // Card size and animate
-  const radius = "14px"
-  const cardWidthP = "32%"
-  const cardWidthL = "55%"
+export default function ComputerCardData({ computerCard, ...cardsize }) {
   const rotationLandscape = keyframes({
     from: { transform: "rotate(0deg)" },
     to: { transform: "rotate(359deg)" },
@@ -19,19 +15,19 @@ export default function ComputerCardData({ computerCard }) {
     <Card
       sx={{
         "@media (orientation: portrait)": {
-          maxWidth: cardWidthP,
-          borderRadius: radius,
+          maxWidth: cardsize.cardWidthP,
+          borderRadius: cardsize.radius,
           mx: "auto",
           transformOrigin: "center",
           transform: "rotate(-90deg)",
-          animation: `${rotationPortrait} .8s 1 ease-out`,
+          animation: `${rotationPortrait} .5s 1 ease-out`,
         },
         "@media (orientation: landscape)": {
-          maxWidth: cardWidthL,
-          borderRadius: radius,
+          maxWidth: cardsize.cardWidthL,
+          borderRadius: cardsize.radius,
           mr: "auto",
           ml: 4,
-          animation: `${rotationLandscape} .8s 1 ease-out`,
+          animation: `${rotationLandscape} .5s 1 ease-out`,
         },
       }}
     >
