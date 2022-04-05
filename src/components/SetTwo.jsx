@@ -65,8 +65,20 @@ export default function SetTwo() {
         }}
       >
         <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
-          {topcard && <PlayerCardData playerCard={playerCard} {...cardsize} />}
-          {!topcard && <PlayerCardData playerCard={playerCard} {...cardsize} />}
+          {topcard && (
+            <PlayerCardData
+              playerCard={playerCard}
+              nextdeck={nextdeck}
+              {...cardsize}
+            />
+          )}
+          {!topcard && (
+            <PlayerCardData
+              playerCard={playerCard}
+              nextdeck={nextdeck}
+              {...cardsize}
+            />
+          )}
         </Grid>
 
         <Grid item xs={12} sm={4}>
@@ -79,10 +91,18 @@ export default function SetTwo() {
 
         <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
           {topcard && (
-            <ComputerCardData computerCard={computerCard} {...cardsize} />
+            <ComputerCardData
+              computerCard={computerCard}
+              nextdeck={nextdeck}
+              {...cardsize}
+            />
           )}
           {!topcard && (
-            <ComputerCardData computerCard={computerCard} {...cardsize} />
+            <ComputerCardData
+              computerCard={computerCard}
+              nextdeck={nextdeck}
+              {...cardsize}
+            />
           )}
         </Grid>
       </Grid>

@@ -1,7 +1,9 @@
 import { Card, CardMedia } from "@mui/material"
 import { keyframes } from "@emotion/react"
+import RedDBack from "../../assets/images/cards/plain/2B.svg"
+import DarkDBack from "../../assets/images/cards/plain/1B.svg"
 
-const ComputerCardData = ({ computerCard, ...cardsize }) => {
+const ComputerCardData = ({ computerCard, nextdeck, ...cardsize }) => {
   const rotationPortrait = keyframes({
     from: { transform: "rotate(-90deg)" },
     to: { transform: "rotate(270deg)" },
@@ -30,7 +32,7 @@ const ComputerCardData = ({ computerCard, ...cardsize }) => {
             maxWidth: cardsize.cardWidthL,
             borderRadius: cardsize.radius,
             marginLeft: "15%",
-            animation: `${rotationLandscape} .7s 1 linear`,
+            animation: `${backsideLandscape} .3s 1 linear`,
             transformStyle: "preserve-3d",
             backfaceVisibility: "hidden",
             position: "absolute",
@@ -38,7 +40,11 @@ const ComputerCardData = ({ computerCard, ...cardsize }) => {
           },
         }}
       >
-        <CardMedia component="img" src={computerCard} alt="card" />
+        <CardMedia
+          component="img"
+          src={nextdeck ? RedDBack : DarkDBack}
+          alt="card"
+        />
       </Card>
       <Card
         sx={{
@@ -49,7 +55,7 @@ const ComputerCardData = ({ computerCard, ...cardsize }) => {
             maxWidth: cardsize.cardWidthL,
             borderRadius: cardsize.radius,
             marginLeft: "15%",
-            animation: `${backsideLandscape} .7s 1 linear`,
+            animation: `${rotationLandscape} .3s 1 linear`,
             transformStyle: "preserve-3d",
             backfaceVisibility: "hidden",
             position: "absolute",

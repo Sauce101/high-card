@@ -1,9 +1,9 @@
-import HighCardTwo from "./components/HighCardTwo"
+import HighCardDraw from "./components/HighCardDraw"
 
 function App() {
   return (
     <div className="App">
-      <HighCardTwo />
+      <HighCardDraw />
     </div>
   )
 }
