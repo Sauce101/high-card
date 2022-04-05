@@ -22,11 +22,7 @@ const ComputerCardData = ({ computerCard, nextdeck, ...cardsize }) => {
       <Card
         sx={{
           "@media (orientation: portrait)": {
-            maxWidth: cardsize.cardWidthP,
-            borderRadius: cardsize.radius,
-            mx: "auto",
-            transform: "rotate(-90deg)",
-            animation: `${rotationPortrait} .6s 1 ease-out`,
+            display: "none",
           },
           "@media (orientation: landscape)": {
             maxWidth: cardsize.cardWidthL,
@@ -49,7 +45,11 @@ const ComputerCardData = ({ computerCard, nextdeck, ...cardsize }) => {
       <Card
         sx={{
           "@media (orientation: portrait)": {
-            display: "none",
+            maxWidth: cardsize.cardWidthP,
+            borderRadius: cardsize.radius,
+            mx: "auto",
+            transform: "rotate(-90deg)",
+            animation: `${rotationPortrait} .6s 1 ease-out`,
           },
           "@media (orientation: landscape)": {
             maxWidth: cardsize.cardWidthL,
