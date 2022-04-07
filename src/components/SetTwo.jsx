@@ -43,7 +43,8 @@ export default function SetTwo() {
   let cardsize = {
     radius: "14px",
     cardWidthL: "55%",
-    cardWidthP: "32%",
+    cardWidthP: "27%",
+    // cardWidthP: "32%",
   }
 
   return (
@@ -53,9 +54,8 @@ export default function SetTwo() {
           "@media (orientation: portrait)": {
             display: "grid",
             gridTemplateRows: "repeat(3, 1fr)",
-            gap: 3,
+            gap: 5,
             mb: "auto",
-            // overflow: "hidden",
           },
           "@media (orientation: landscape)": {
             display: "grid",
@@ -81,7 +81,7 @@ export default function SetTwo() {
           )}
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
           <DeckCardData
             flipCards={flipCards}
             nextdeck={nextdeck}

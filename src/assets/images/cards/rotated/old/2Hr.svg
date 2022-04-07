@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   class="card"
+   face="2H"
+   height="2.5in"
+   preserveAspectRatio="none"
+   viewBox="-120 -168 336 240"
+   width="3.5in"
+   version="1.1"
+   id="svg8490"
+   sodipodi:docname="2Hr.svg"
+   inkscape:version="1.1.2 (b8e25be833, 2022-02-05)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <sodipodi:namedview
+     id="namedview8492"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     inkscape:document-units="in"
+     showgrid="false"
+     inkscape:zoom="1.4761905"
+     inkscape:cx="168.33871"
+     inkscape:cy="119.90323"
+     inkscape:window-width="1366"
+     inkscape:window-height="705"
+     inkscape:window-x="-8"
+     inkscape:window-y="-8"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8490" />
+  <defs
+     id="defs8480">
+    <symbol
+       id="SH2"
+       viewBox="-600 -600 1200 1200"
+       preserveAspectRatio="xMinYMid">
+      <path
+         d="m 0,-300 a 241.91941,241.91941 0 0 1 460,150 C 400,0 200,300 0,500 -200,300 -400,0 -460,-150 A 241.91941,241.91941 0 0 1 0,-300 Z"
+         fill="#ff0000"
+         id="path8477" />
+    </symbol>
+  </defs>
+  <rect
+     width="239"
+     height="335"
+     x="-71.5"
+     y="-119.5"
+     rx="12"
+     ry="12"
+     fill="#ffffff"
+     stroke="#000000"
+     id="rect8482"
+     transform="rotate(-90)" />
+  <use
+     xlink:href="#SH2"
+     height="70"
+     width="70"
+     x="-35"
+     y="-146.463"
+     id="use8484"
+     transform="rotate(-90,0,-48)" />
+  <g
+     transform="rotate(90,48,0)"
+     id="g8488">
+    <use
+       xlink:href="#SH2"
+       height="70"
+       width="70"
+       x="-35"
+       y="-146.463"
+       id="use8486" />
+  </g>
+</svg>

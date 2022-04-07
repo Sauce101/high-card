@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Grid } from "@mui/material"
-import Deck from "./Decks/OldDeck"
+import Deck from "./Decks/OldRDeck"
 import PlayerCardData from "./cardData/PlayerCardData"
 import ComputerCardData from "./cardData/ComputerCardData"
 import DeckCardData from "./cardData/DeckCardData"
@@ -19,6 +19,7 @@ function StartGame() {
   computerCard = computerDeck.pop()
 }
 StartGame()
+
 export default function SetThree() {
   const [topcard, setTopcard] = useState(() => {
     return true
@@ -42,7 +43,8 @@ export default function SetThree() {
   let cardsize = {
     radius: "14px",
     cardWidthL: "55%",
-    cardWidthP: "32%",
+    cardWidthP: "27%",
+    // cardWidthP: "32%",
   }
 
   return (

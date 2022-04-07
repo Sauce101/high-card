@@ -8,8 +8,8 @@ const DeckCardData = ({ flipCards, nextdeck, ...cardsize }) => {
     <Card
       sx={{
         "@media (orientation: portrait)": {
-          transform: "rotate(-90deg)",
-          transformOrigin: "center",
+          // transform: "rotate(-90deg)",
+          // transformOrigin: "center",
           maxWidth: cardsize.cardWidthP,
           borderRadius: cardsize.radius,
           mx: "auto",

@@ -5,8 +5,12 @@ import DarkDBack from "../../assets/images/cards/plain/1B.svg"
 
 const ComputerCardData = ({ computerCard, nextdeck, ...cardsize }) => {
   const rotationPortrait = keyframes({
-    from: { transform: "rotate(-90deg)" },
-    to: { transform: "rotate(270deg)" },
+    from: { transform: "translate(-50%, -50%) rotateY(0deg)" },
+    to: { transform: "translate(-50%, -50%) rotateY(360deg)" },
+  })
+  const backsidePortrait = keyframes({
+    from: { transform: "translate(-50%, -50%) rotateY(180deg)" },
+    to: { transform: "translate(-50%, -50%) rotateY(540deg)" },
   })
   const rotationLandscape = keyframes({
     from: { transform: "rotateY(0deg)" },
@@ -22,7 +26,15 @@ const ComputerCardData = ({ computerCard, nextdeck, ...cardsize }) => {
       <Card
         sx={{
           "@media (orientation: portrait)": {
-            display: "none",
+            maxWidth: cardsize.cardWidthP,
+            borderRadius: cardsize.radius,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%)",
+            animation: `${backsidePortrait} .3s 1 linear`,
+            transformStyle: "preserve-3d",
+            backfaceVisibility: "hidden",
           },
           "@media (orientation: landscape)": {
             maxWidth: cardsize.cardWidthL,
@@ -47,9 +59,13 @@ const ComputerCardData = ({ computerCard, nextdeck, ...cardsize }) => {
           "@media (orientation: portrait)": {
             maxWidth: cardsize.cardWidthP,
             borderRadius: cardsize.radius,
-            mx: "auto",
-            transform: "rotate(-90deg)",
-            animation: `${rotationPortrait} .6s 1 ease-out`,
+            position: "absolute",
+            top: "50%",
+            left: "50%",
+            transform: "translate(-50%, -50%) ",
+            animation: `${rotationPortrait} .3s 1 linear`,
+            transformStyle: "preserve-3d",
+            backfaceVisibility: "hidden",
           },
           "@media (orientation: landscape)": {
             maxWidth: cardsize.cardWidthL,

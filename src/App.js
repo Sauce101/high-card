@@ -1,11 +1,7 @@
 import HighCardDraw from "./components/HighCardDraw"
 
 function App() {
-  return (
-    <div className="App">
-      <HighCardDraw />
-    </div>
-  )
+  return <HighCardDraw />
 }
 
 export default App
