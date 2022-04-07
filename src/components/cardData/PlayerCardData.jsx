@@ -6,12 +6,12 @@ import DarkDBack from "../../assets/images/cards/plain/1B.svg"
 
 const PlayerCardData = ({ playerCard, nextdeck, ...cardsize }) => {
   const rotationPortrait = keyframes({
-    from: { transform: "translate(-50%, -50%) rotateY(0deg)" },
-    to: { transform: "translate(-50%, -50%) rotateY(360deg)" },
+    from: { transform: "rotateX(0deg)" },
+    to: { transform: "rotateX(360deg)" },
   })
   const backsidePortrait = keyframes({
-    from: { transform: "translate(-50%, -50%) rotateY(180deg)" },
-    to: { transform: "translate(-50%, -50%) rotateY(540deg)" },
+    from: { transform: "rotateX(180deg)" },
+    to: { transform: "rotateX(540deg)" },
   })
   const rotationLandscape = keyframes({
     from: { transform: "rotateY(0deg)" },
@@ -30,9 +30,11 @@ const PlayerCardData = ({ playerCard, nextdeck, ...cardsize }) => {
             maxWidth: cardsize.cardWidthP,
             borderRadius: cardsize.radius,
             position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%) ",
+            top: "0",
+            left: "0",
+            bottom: "0",
+            right: "0",
+            margin: "auto",
             animation: `${backsidePortrait} .3s 1 linear`,
             transformStyle: "preserve-3d",
             backfaceVisibility: "hidden",
@@ -61,9 +63,11 @@ const PlayerCardData = ({ playerCard, nextdeck, ...cardsize }) => {
             maxWidth: cardsize.cardWidthP,
             borderRadius: cardsize.radius,
             position: "absolute",
-            top: "50%",
-            left: "50%",
-            transform: "translate(-50%, -50%) ",
+            top: "0",
+            left: "0",
+            bottom: "0",
+            right: "0",
+            margin: "auto",
             animation: `${rotationPortrait} .3s 1 linear`,
             transformStyle: "preserve-3d",
             backfaceVisibility: "hidden",
