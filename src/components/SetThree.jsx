@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react"
 import { Grid } from "@mui/material"
-import Deck from "./Decks/OldRDeck"
+import Deck from "./Decks/OldDeck"
 import PlayerCardData from "./cardData/PlayerCardData"
 import ComputerCardData from "./cardData/ComputerCardData"
 import DeckCardData from "./cardData/DeckCardData"
