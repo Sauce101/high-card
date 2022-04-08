@@ -1,6 +1,7 @@
 import { useState } from "react"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
 import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material"
+import StyleTwoToneIcon from "@mui/icons-material/StyleTwoTone"
 import SetTwo from "./SetTwo"
 import SetThree from "./SetThree"
 
@@ -57,10 +58,14 @@ export default function HighCardDraw() {
                 mr: "auto",
                 fontFamily: "'Roboto Serif', serif",
               }}
-              onClick={deckStyle}
             >
               High Card
             </Typography>
+            <StyleTwoToneIcon
+              fontSize="large"
+              sx={{ mr: 2 }}
+              onClick={deckStyle}
+            />
           </Toolbar>
         </AppBar>
         {nextdeck ? <SetTwo /> : <SetThree />}
