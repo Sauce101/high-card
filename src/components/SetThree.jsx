@@ -44,7 +44,6 @@ export default function SetThree() {
     radius: "14px",
     cardWidthL: "55%",
     cardWidthP: "27%",
-    // cardWidthP: "32%",
   }
 
   return (
@@ -56,7 +55,6 @@ export default function SetThree() {
             gridTemplateRows: "repeat(3, 1fr)",
             gap: 3,
             mb: "auto",
-            // overflow: "hidden",
           },
           "@media (orientation: landscape)": {
             display: "grid",
