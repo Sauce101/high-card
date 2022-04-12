@@ -10,7 +10,5 @@ Copyright 2022 Michael Saucedo
 
 <br />
 <p align="center">
-  <a href="">
     <img alt="Ace" src="./src/assets/images/cards/plain/AS.svg" />
-  </a>
 </p>
