@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { createTheme, ThemeProvider } from "@mui/material/styles"
-import { AppBar, Box, CssBaseline, Toolbar, Typography } from "@mui/material"
+import { AppBar, Stack, CssBaseline, Toolbar, Typography } from "@mui/material"
 import StyleTwoToneIcon from "@mui/icons-material/StyleTwoTone"
 import SetTwo from "./SetTwo"
 import SetThree from "./SetThree"
@@ -32,25 +32,26 @@ export default function HighCardDraw() {
   return (
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Box
+      <Stack
+        direction="column"
+        justifyContent="center"
+        alignItems="center"
+        spacing={8}
         sx={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
           minHeight: "100vh",
           backgroundColor: "primary.main",
+          overflow: "hidden",
         }}
       >
         <AppBar
-          position="relative"
           sx={{
             backgroundColor: "secondary.main",
-            mb: "auto",
+            my: "auto",
           }}
         >
           <Toolbar>
             <Typography
-              variant="h6"
+              variant="h5"
               color="inherit"
               noWrap
               sx={{
@@ -69,7 +70,7 @@ export default function HighCardDraw() {
           </Toolbar>
         </AppBar>
         {nextdeck ? <SetTwo /> : <SetThree />}
-      </Box>
+      </Stack>
     </ThemeProvider>
   )
 }

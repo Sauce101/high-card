@@ -42,28 +42,34 @@ export default function SetThree() {
   // Card size
   let cardsize = {
     radius: "14px",
-    cardWidthL: "55%",
-    cardWidthP: "27%",
+    cardWidthL: "70%",
+    cardWidthPsm: "32%",
+    cardWidthP: "40%",
+    cardWidthPmd: "26%",
   }
 
   return (
     <>
       <Grid
+        container
         sx={{
           "@media (orientation: portrait)": {
             display: "grid",
-            gridTemplateRows: "repeat(3, 1fr)",
+            gridTemplateColumns: "1fr",
             gap: 3,
-            mb: "auto",
           },
           "@media (orientation: landscape)": {
             display: "grid",
-            gridTemplateColumns: "repeat(3, 1fr)",
-            mb: "auto",
+            gridTemplate: "1fr / repeat(3, 1fr)",
+            gap: 5,
+            px: 5,
           },
         }}
       >
-        <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
+        <Grid
+          item
+          sx={{ perspective: "1000px", transformStyle: "preserve-3d" }}
+        >
           {topcard && (
             <PlayerCardData
               playerCard={playerCard}
@@ -80,7 +86,7 @@ export default function SetThree() {
           )}
         </Grid>
 
-        <Grid item xs={12} sm={4}>
+        <Grid item>
           <DeckCardData
             flipCards={flipCards}
             nextdeck={nextdeck}
@@ -88,7 +94,10 @@ export default function SetThree() {
           />
         </Grid>
 
-        <Grid item xs={12} sm={4} sx={{ perspective: "1000px" }}>
+        <Grid
+          item
+          sx={{ perspective: "1000px", transformStyle: "preserve-3d" }}
+        >
           {topcard && (
             <ComputerCardData
               computerCard={computerCard}
