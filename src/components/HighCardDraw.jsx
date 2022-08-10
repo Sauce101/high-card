@@ -51,7 +51,7 @@ export default function HighCardDraw() {
         >
           <Toolbar>
             <Typography
-              variant="h5"
+              variant="h6"
               color="inherit"
               noWrap
               sx={{

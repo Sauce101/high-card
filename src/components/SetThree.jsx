@@ -55,7 +55,8 @@ export default function SetThree() {
         sx={{
           "@media (orientation: portrait)": {
             display: "grid",
-            gridTemplateColumns: "1fr",
+            // gridTemplateColumns: "1fr",
+            gridTemplate: "repeat(3, 1fr) / 1fr",
             gap: 3,
           },
           "@media (orientation: landscape)": {
@@ -86,7 +87,7 @@ export default function SetThree() {
           )}
         </Grid>
 
-        <Grid item>
+        <Grid item sx={{ perspective: "1000px" }}>
           <DeckCardData
             flipCards={flipCards}
             nextdeck={nextdeck}

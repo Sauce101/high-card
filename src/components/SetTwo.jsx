@@ -55,7 +55,8 @@ export default function SetTwo() {
         sx={{
           "@media (orientation: portrait)": {
             display: "grid",
-            gridTemplateColumns: "1fr",
+            // gridTemplateColumns: "1fr",
+            gridTemplate: "repeat(3, 1fr) / 1fr",
             gap: 3,
           },
           "@media (orientation: landscape)": {
